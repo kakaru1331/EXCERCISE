@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="heading"></h1>  
+  <input id="btn" type="button" value="click me">
+  
+  <script>
+    var heading = document.getElementById('heading');
+    var btn = document.getElementById('btn')
+    var toggle = false;
+
+    btn.addEventListener('click', function() {
+      if(toggle) {
+        toggle = false; 
+        heading.innerHTML = '';
+      } else {
+        toggle = true;
+        heading.innerHTML = 'Hello World!';
+      } 
+    });
+  </script>
+</body>
+</html>
