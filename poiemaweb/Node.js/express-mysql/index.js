@@ -1,8 +1,10 @@
 var mysql = require('mysql');
+var ID = process.env.SQL_ID;
+var PWD = process.env.SQL_PWD
 var connection = mysql.createConnection({
   host      : 'localhost',
-  user      : 'root',
-  password  : '012345',
+  user      : ID,
+  password  : PWD,
   port      : '3306',
   database  : 'my_db'
 });
