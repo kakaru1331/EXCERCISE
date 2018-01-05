@@ -5,8 +5,12 @@ const app = express();
 app.set('view engine', 'pug');
 app.set('views', './views');
 
+app.get('/home', function (req, res) {
+  res.render('home');
+});
+
 app.get('/', function (req, res) {
-  res.send('Hello world!');
+  res.redirect('/home');
 });
 
 app.get('/post', function (req, res) {
